@@ -1,0 +1,1627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>janela_armadura_transversal</class>
+ <widget class="QDialog" name="janela_armadura_transversal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1030</width>
+    <height>670</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1030</width>
+    <height>670</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1030</width>
+    <height>670</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dimensionamento da Armadura Transversal</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>1000000</width>
+       <height>100000</height>
+      </size>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarPolicy::ScrollBarAsNeeded</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>false</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-3334</y>
+        <width>997</width>
+        <height>3970</height>
+       </rect>
+      </property>
+      <widget class="QPushButton" name="confirmar">
+       <property name="geometry">
+        <rect>
+         <x>900</x>
+         <y>3930</y>
+         <width>81</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Confirmar</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="cancelar">
+       <property name="geometry">
+        <rect>
+         <x>810</x>
+         <y>3930</y>
+         <width>81</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Cancelar</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="manual">
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>3930</y>
+         <width>25</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>Dúvidas? Acesse o manual referente a essa janela</string>
+       </property>
+       <property name="text">
+        <string>?</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_secao_e_esforcos">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>971</width>
+         <height>1041</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Seção e Esforços Atuantes</string>
+       </property>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>590</y>
+          <width>411</width>
+          <height>431</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Esforço Cortante de Cálculo (Vsd)  </string>
+        </property>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>320</y>
+           <width>411</width>
+           <height>111</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>&lt;div style=&quot;font-family: sans-serif; font-size: 10pt; color: #e0e0e0; text-align: center;&quot;&gt;
+    &lt;b style=&quot;font-size: 11.5pt; color: #ffffff;&quot;&gt;Convenção:&lt;/b&gt;
+    &lt;div style=&quot;margin-top: 6px; border-top: 1px solid #444; padding-top: 6px;&quot;&gt;
+        
+        &lt;span style=&quot;color: #81c784; font-weight: bold;&quot;&gt;(+) Cortante Positivo:&lt;/span&gt; 
+        Rotação horária → &lt;b&gt;Tração diagonal (/) → Estribos&lt;/b&gt;
+        &lt;br&gt;
+        
+        &lt;span style=&quot;color: #e57373; font-weight: bold;&quot;&gt;(-) Cortante Negativo:&lt;/span&gt; 
+        Rotação anti-horária → &lt;b&gt;Tração diagonal (\) → Estribos&lt;/b&gt;
+        
+    &lt;/div&gt;
+&lt;/div&gt;</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>80</y>
+           <width>321</width>
+           <height>111</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>ELU — Estado Limite Último: Combinação Normal </string>
+         </property>
+         <widget class="QDoubleSpinBox" name="v_min_elu">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>70</y>
+            <width>111</width>
+            <height>23</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QDoubleSpinBox" name="v_max_elu">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>30</y>
+            <width>111</width>
+            <height>23</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_4">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>70</y>
+            <width>101</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>&lt;div style=&quot;font-family: sans-serif; font-size: 11pt; color: #e57373; font-weight: bold; text-align: center;&quot;&gt;
+    Mínimo (-)
+&lt;/div&gt;</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_3">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>30</y>
+            <width>101</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>&lt;div style=&quot;font-family: sans-serif; font-size: 11pt; color: #81c784; font-weight: bold; text-align: center;&quot;&gt;
+    Máximo (+)
+&lt;/div&gt;</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_5">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>210</y>
+           <width>321</width>
+           <height>111</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>ELS — Estado Limite de Serviço: Combinação Frequente </string>
+         </property>
+         <widget class="QDoubleSpinBox" name="v_min_els">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>70</y>
+            <width>111</width>
+            <height>23</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QDoubleSpinBox" name="v_max_els">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>30</y>
+            <width>111</width>
+            <height>23</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_13">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>70</y>
+            <width>101</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>&lt;div style=&quot;font-family: sans-serif; font-size: 11pt; color: #e57373; font-weight: bold; text-align: center;&quot;&gt;
+    Mínimo (-)
+&lt;/div&gt;</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_14">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>30</y>
+            <width>101</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>&lt;div style=&quot;font-family: sans-serif; font-size: 11pt; color: #81c784; font-weight: bold; text-align: center;&quot;&gt;
+    Máximo (+)
+&lt;/div&gt;</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="horizontalLayoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>391</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item alignment="Qt::AlignmentFlag::AlignHCenter">
+           <widget class="QRadioButton" name="vsd_automatico">
+            <property name="text">
+             <string>Automático</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignmentFlag::AlignHCenter">
+           <widget class="QRadioButton" name="vsd_manual">
+            <property name="text">
+             <string>Manual</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>590</y>
+          <width>511</width>
+          <height>431</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Laje: Largura Colaborante (bf)  </string>
+        </property>
+        <widget class="QFrame" name="frame_desenho_laje">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>100</y>
+           <width>331</width>
+           <height>311</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Shadow::Raised</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_posicao_longarina">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>60</y>
+           <width>121</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Posição da Longarina:</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="combo_posicao_longarina">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>60</y>
+           <width>121</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <item>
+          <property name="text">
+           <string>Centro</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Extremidade</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QPushButton" name="atualizar_desenho_laje">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>280</y>
+           <width>151</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Atualizar Visualização</string>
+         </property>
+         <property name="autoDefault">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="memorial_bf">
+         <property name="geometry">
+          <rect>
+           <x>360</x>
+           <y>250</y>
+           <width>126</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Memorial de Cálculo</string>
+         </property>
+         <property name="autoDefault">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="doubleSpin_bf">
+         <property name="geometry">
+          <rect>
+           <x>380</x>
+           <y>190</y>
+           <width>111</width>
+           <height>26</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_7">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>190</y>
+           <width>221</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:13pt; font-weight:700; color:#ffffff;&quot;&gt;b&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:13pt; font-weight:700; color:#ffffff; vertical-align:sub;&quot;&gt;f&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:13pt; font-weight:700; color:#ffffff;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="horizontalLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>331</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QRadioButton" name="laje_automatico">
+            <property name="text">
+             <string>Automático</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="laje_manual">
+            <property name="text">
+             <string>Manual</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="laje_n_considerar">
+            <property name="text">
+             <string>Não Considerar</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QPushButton" name="exportar_frame_desenho_laje">
+         <property name="geometry">
+          <rect>
+           <x>380</x>
+           <y>400</y>
+           <width>121</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Exportar Desenho</string>
+         </property>
+         <property name="autoDefault">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_18">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>931</width>
+          <height>511</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <widget class="QFrame" name="desenho_dlc_secao">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>911</width>
+           <height>461</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Shadow::Raised</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>131</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Visualizar Combinação:</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioELU">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>10</y>
+           <width>51</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>ELU</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioELS">
+         <property name="geometry">
+          <rect>
+           <x>200</x>
+           <y>10</y>
+           <width>51</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>ELS</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="exportar_desenho_dlc_secao">
+         <property name="geometry">
+          <rect>
+           <x>790</x>
+           <y>10</y>
+           <width>121</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Exportar Desenho</string>
+         </property>
+         <property name="autoDefault">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>555</y>
+          <width>111</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Selecione a Seção:</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="combo_secao">
+        <property name="geometry">
+         <rect>
+          <x>480</x>
+          <y>555</y>
+          <width>151</width>
+          <height>26</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_parametros_calculo">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>1070</y>
+         <width>971</width>
+         <height>331</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Parâmetros de Cálculo</string>
+       </property>
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>40</y>
+          <width>941</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <widget class="QComboBox" name="combo_classe_concreto">
+         <property name="geometry">
+          <rect>
+           <x>200</x>
+           <y>10</y>
+           <width>61</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>Classe de resistência característica à compressão do concreto (fck), utilizada no dimensionamento e verificação dos elementos estruturais.</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>C20</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>C25</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>C30</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>C35</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>C40</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>C45</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>C50</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="label_8">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>191</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Classe de Resistência do Concreto: </string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_6">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>190</y>
+          <width>941</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Altura útil da seção (d)</string>
+        </property>
+        <widget class="QDoubleSpinBox" name="doubleSpinBox_d_sup">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>80</y>
+           <width>101</width>
+           <height>23</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_46">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>21</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:11pt; color:#ffffff;&quot;&gt;d&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:11pt; color:#ffffff; vertical-align:sub;&quot;&gt;inf:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="doubleSpinBox_d_inf">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>40</y>
+           <width>101</width>
+           <height>23</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_47">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>21</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:11pt; color:#ffffff;&quot;&gt;d&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:11pt; color:#ffffff; vertical-align:sub;&quot;&gt;sup:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_50">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>40</y>
+           <width>731</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:11pt; color:#ffffff; vertical-align:sub;&quot;&gt;*&lt;/span&gt;Distância da borda superior da seção até o centro de gravidade da armadura inferior.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_54">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>80</y>
+           <width>731</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:11pt; color:#ffffff; vertical-align:sub;&quot;&gt;*&lt;/span&gt;Distância da borda inferior da seção até o centro de gravidade da armadura superior.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_7">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>100</y>
+          <width>941</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Inclinação dos estribos em relação ao eixo longitudinal</string>
+        </property>
+        <widget class="QLabel" name="label_55">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>30</y>
+           <width>21</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;α:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_53">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>30</y>
+           <width>731</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:11pt; color:#ffffff; vertical-align:sub;&quot;&gt;* &lt;/span&gt;45° ≤ α ≤ 90°.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="spinBox_alpha">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>30</y>
+           <width>101</width>
+           <height>26</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_resultados_armadura">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>1430</y>
+         <width>971</width>
+         <height>1041</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Armadura Transversal (Verificação ELU)</string>
+       </property>
+       <widget class="QGroupBox" name="groupBox_9">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>50</y>
+          <width>911</width>
+          <height>441</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Verificação de Segurança</string>
+        </property>
+        <widget class="QLabel" name="html_verificacao_biela">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>891</width>
+           <height>411</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot; bgcolor=&quot;#1e1e2e&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:16px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#1e1e1e;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:14pt; font-weight:700; color:#90caf9;&quot;&gt;🔍 Verificação da Biela de Compressão (V&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:14pt; font-weight:700; color:#90caf9; vertical-align:sub;&quot;&gt;Rd2&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:14pt; font-weight:700; color:#90caf9;&quot;&gt;) &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; font-weight:700; color:#4ade80; background-color:#166534;&quot;&gt;✔️ ✓ APROVADO &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#252525;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; color:#b0bec5; background-color:#252525;&quot;&gt;NBR 6118:2023 – Item 17.4.2.2 (Modelo I, θ = 45°) &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:10px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#252525;&quot;&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0; background-color:#252525;&quot;&gt;α&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0; vertical-align:sub;&quot;&gt;v2&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0;&quot;&gt; = 1 − f&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0; vertical-align:sub;&quot;&gt;ck&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0;&quot;&gt;/250 = 1 − 30.0/250 = &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; font-weight:700; color:#e0e0e0;&quot;&gt;0.8800&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0;&quot;&gt;&lt;br /&gt;V&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0; vertical-align:sub;&quot;&gt;Rd2&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0;&quot;&gt; = 0,27 · α&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0; vertical-align:sub;&quot;&gt;v2&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0;&quot;&gt; · f&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0; vertical-align:sub;&quot;&gt;cd&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0;&quot;&gt; · b&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0; vertical-align:sub;&quot;&gt;w&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0;&quot;&gt; · d &lt;br /&gt;  = 0,27 · 0.8800 · (21.429/10) · 60.00 · 155.00&lt;br /&gt;  = &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; font-weight:700; color:#e0e0e0;&quot;&gt;4735.03 kN&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;table border=&quot;0&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; border-collapse:collapse;&quot; cellspacing=&quot;2&quot; cellpadding=&quot;0&quot;&gt;
+&lt;tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:8; padding-bottom:8;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; color:#b0bec5;&quot;&gt;V&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; color:#b0bec5; vertical-align:sub;&quot;&gt;sd&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; color:#b0bec5;&quot;&gt; (solicitante)&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:8; padding-bottom:8;&quot;&gt;
+&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; font-weight:700; color:#90caf9;&quot;&gt;2081.73 kN&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:8; padding-bottom:8;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; color:#b0bec5;&quot;&gt;V&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; color:#b0bec5; vertical-align:sub;&quot;&gt;Rd2&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; color:#b0bec5;&quot;&gt; (resistente)&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:8; padding-bottom:8;&quot;&gt;
+&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; font-weight:700; color:#90caf9;&quot;&gt;4735.03 kN&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:10px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#166534;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:13pt; color:#ffffff;&quot;&gt;V&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:13pt; color:#ffffff; vertical-align:sub;&quot;&gt;sd&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:13pt; color:#ffffff;&quot;&gt; = 2081.73 kN ≤ V&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:13pt; color:#ffffff; vertical-align:sub;&quot;&gt;Rd2&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:13pt; color:#ffffff;&quot;&gt; = 4735.03 kN &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:6px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#166534;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:11pt; color:#4ade80; background-color:#166534;&quot;&gt;A biela de compressão resiste com segurança. &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;right&quot; style=&quot; margin-top:14px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#1e1e1e;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#888888; background-color:#1e1e1e;&quot;&gt;f&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#888888; vertical-align:sub;&quot;&gt;cd&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#888888;&quot;&gt; = 21.429 MPa  |  b&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#888888; vertical-align:sub;&quot;&gt;w&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#888888;&quot;&gt; = 60.00 cm  |  d = 155.00 cm &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="textInteractionFlags">
+          <set>Qt::TextInteractionFlag::TextSelectableByMouse</set>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>971</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
+          <widget class="QPushButton" name="calcular_armadura">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Calcular Taxa de Armadura Transversal (Asw/s) </string>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_8">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>510</y>
+          <width>911</width>
+          <height>481</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Dimensionamento da Armadura Transversal</string>
+        </property>
+        <widget class="QLabel" name="html_resumo_dimensionamento">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>891</width>
+           <height>471</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot; bgcolor=&quot;#1e1e2e&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:16px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#1e1e1e;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:14pt; font-weight:700; color:#90caf9; background-color:#1e1e1e;&quot;&gt;📊 Dimensionamento da Armadura Transversal (Modelo I) &lt;/span&gt;&lt;/p&gt;
+&lt;table border=&quot;0&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border-collapse:collapse;&quot; cellspacing=&quot;2&quot; cellpadding=&quot;0&quot;&gt;
+&lt;tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:10; padding-bottom:10;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; color:#b0bec5;&quot;&gt;V&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; color:#b0bec5; vertical-align:sub;&quot;&gt;c&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; color:#b0bec5;&quot;&gt; (parcela do concreto)&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:10; padding-bottom:10;&quot;&gt;
+&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; font-weight:700; color:#90caf9;&quot;&gt;808.11 kN&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:10; padding-bottom:10;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; color:#b0bec5;&quot;&gt;V&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; color:#b0bec5; vertical-align:sub;&quot;&gt;sw&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; color:#b0bec5;&quot;&gt; (parcela da armadura)&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:10; padding-bottom:10;&quot;&gt;
+&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; font-weight:700; color:#90caf9;&quot;&gt;1273.62 kN&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:10; padding-bottom:10;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; color:#b0bec5;&quot;&gt;A&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; color:#b0bec5; vertical-align:sub;&quot;&gt;sw&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; color:#b0bec5;&quot;&gt;/s (calculado)&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:10; padding-bottom:10;&quot;&gt;
+&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; font-weight:700; color:#f48fb1;&quot;&gt;20.9987 cm²/m&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:10; padding-bottom:10;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; color:#b0bec5;&quot;&gt;A&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; color:#b0bec5; vertical-align:sub;&quot;&gt;sw&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; color:#b0bec5;&quot;&gt;/s (mínimo)&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:10; padding-bottom:10;&quot;&gt;
+&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; font-weight:700; color:#f48fb1;&quot;&gt;6.9515 cm²/m&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:20px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#252525;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:11pt; color:#b0bec5;&quot;&gt;ARMADURA A ADOTAR&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#e0e0e0;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:18pt; font-weight:700; color:#4ade80;&quot;&gt;A&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:18pt; font-weight:700; color:#4ade80; vertical-align:sub;&quot;&gt;sw&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:18pt; font-weight:700; color:#4ade80;&quot;&gt;/s = 21.00 cm²/m &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;right&quot; style=&quot; margin-top:14px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#1e1e1e;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#888888; background-color:#1e1e1e;&quot;&gt;Estribos inclinados a α = 90.0°  |  f&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#888888; vertical-align:sub;&quot;&gt;ywd&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#888888;&quot;&gt; = 434.783 MPa &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="textInteractionFlags">
+          <set>Qt::TextInteractionFlag::TextSelectableByMouse</set>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget_5">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>990</y>
+          <width>971</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item alignment="Qt::AlignmentFlag::AlignHCenter">
+          <widget class="QPushButton" name="memorial_asw">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Memorial de Cálculo</string>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_detalhamento">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>2500</y>
+         <width>971</width>
+         <height>661</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Detalhamento</string>
+       </property>
+       <widget class="QGroupBox" name="groupBox_15">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>1369</y>
+          <width>931</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Altura útil da seção real  </string>
+        </property>
+        <widget class="QWidget" name="horizontalLayoutWidget_9">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <widget class="QRadioButton" name="d_automatico">
+            <property name="text">
+             <string>Automático</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="d_manual">
+            <property name="text">
+             <string>Manual</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QDoubleSpinBox" name="doubleSpinBox_d_real_sup">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>50</y>
+           <width>101</width>
+           <height>23</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="doubleSpinBox_d_real_inf">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>20</y>
+           <width>101</width>
+           <height>23</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_51">
+         <property name="geometry">
+          <rect>
+           <x>210</x>
+           <y>50</y>
+           <width>21</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:11pt; color:#ffffff;&quot;&gt;d&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:11pt; color:#ffffff; vertical-align:sub;&quot;&gt;sup:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_52">
+         <property name="geometry">
+          <rect>
+           <x>210</x>
+           <y>20</y>
+           <width>21</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:11pt; color:#ffffff;&quot;&gt;d&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:11pt; color:#ffffff; vertical-align:sub;&quot;&gt;inf:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_18">
+         <property name="geometry">
+          <rect>
+           <x>360</x>
+           <y>20</y>
+           <width>561</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:10pt; font-weight:700; color:#e0e0e0;&quot;&gt;Nota técnica: &lt;/span&gt;O usuário pode informar manualmente os valores de altura útil caso o detalhamento da armadura já tenha sido realizado em outro software ou utilizando um arranjo de barras diferente do padrão adotado neste sistema.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="exportar_deseneho_detalhamento">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>1340</y>
+          <width>129</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>129</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Exportar Desenho</string>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="combo_estribo">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>50</y>
+          <width>121</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>Armadura responsável por resistir aos esforços cortantes e garantir o confinamento e posicionamento das barras longitudinais.</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>ø 6.3 mm</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ø 8.0 mm</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ø 10.0 mm</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ø 12.5 mm</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ø 16.0 mm</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="label_15">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>50</y>
+          <width>191</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Diâmetro Nominal do Estribo:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_16">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>80</y>
+          <width>111</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Número de Ramos: </string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_3">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>391</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item alignment="Qt::AlignmentFlag::AlignHCenter">
+          <widget class="QLabel" name="label_48">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Taxa de Armadura Transversal (&lt;span style=&quot; font-weight:700;&quot;&gt;A&lt;/span&gt;&lt;span style=&quot; font-weight:700; vertical-align:sub;&quot;&gt;sw&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;/s&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;)&lt;/span&gt;: &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="asw_automatico">
+           <property name="text">
+            <string>Automático</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="asw_manual">
+           <property name="text">
+            <string>Manual</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QSpinBox" name="spinBox_ramos">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>80</y>
+          <width>68</width>
+          <height>23</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="html_espacamento_estribos">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>130</y>
+          <width>941</width>
+          <height>521</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot; bgcolor=&quot;#1e1e2e&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:16px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#1e1e1e;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:14pt; font-weight:700; color:#90caf9;&quot;&gt;📏 Espaçamento dos Estribos &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:10pt; color:#b0bec5;&quot;&gt;NBR 6118:2023 – Item 18.3.4.1 &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#252525;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; color:#b0bec5; background-color:#252525;&quot;&gt;Dados de Entrada &lt;/span&gt;&lt;/p&gt;
+&lt;table border=&quot;0&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; border-collapse:collapse;&quot; cellspacing=&quot;2&quot; cellpadding=&quot;0&quot;&gt;
+&lt;tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:4; padding-bottom:4;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#b0bec5;&quot;&gt;A&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#b0bec5; vertical-align:sub;&quot;&gt;sw&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#b0bec5;&quot;&gt;/s necessário&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:4; padding-bottom:4;&quot;&gt;
+&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-weight:700; color:#90caf9;&quot;&gt;21.00 cm²/m&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:4; padding-bottom:4;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#b0bec5;&quot;&gt;Altura útil (d)&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:4; padding-bottom:4;&quot;&gt;
+&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-weight:700; color:#90caf9;&quot;&gt;155.00 cm&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:4; padding-bottom:4;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#b0bec5;&quot;&gt;Diâmetro do estribo (ϕ)&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:4; padding-bottom:4;&quot;&gt;
+&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-weight:700; color:#90caf9;&quot;&gt;8 mm&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:4; padding-bottom:4;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#b0bec5;&quot;&gt;Número de ramos&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:4; padding-bottom:4;&quot;&gt;
+&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-weight:700; color:#90caf9;&quot;&gt;2&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#252525;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:12pt; color:#b0bec5; background-color:#252525;&quot;&gt;Cálculo do Espaçamento &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:10px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#252525;&quot;&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0; background-color:#252525;&quot;&gt;1) Área de uma barra: A₁ = π·ϕ²/4 = π·(0.800)²/4 = 0.5027 cm²&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0;&quot;&gt;&lt;br /&gt;2) Área total do estribo: A&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0; vertical-align:sub;&quot;&gt;est&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0;&quot;&gt; = n_ramos · A₁ = 2 · 0.5027 = 1.0053 cm²&lt;br /&gt;3) Espaçamento calculado: s&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0; vertical-align:sub;&quot;&gt;calc&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0;&quot;&gt; = (A&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0; vertical-align:sub;&quot;&gt;est&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0;&quot;&gt; / A&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0; vertical-align:sub;&quot;&gt;sw&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:11pt; color:#e0e0e0;&quot;&gt;) · 100&lt;br /&gt;   = (1.0053 / 21.00) · 100 = 4.787 cm &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:10px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#252525;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#888888; background-color:#252525;&quot;&gt;Arredondamento para baixo com tolerância de 0,5 cm:&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#888888;&quot;&gt;&lt;br /&gt;s&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#888888; vertical-align:sub;&quot;&gt;calculado&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#888888;&quot;&gt; = 4.787 cm → floor(4.787 × 2) / 2 = 4.5 cm &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#1e3a2f;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:11pt; color:#b0bec5;&quot;&gt;ESPAÇAMENTO FINAL (arredondado p/ 0,5 cm)&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#e0e0e0;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:18pt; font-weight:700; color:#4ade80;&quot;&gt;s = 4.5 cm &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:16px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#252525;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:10pt; color:#b0bec5;&quot;&gt;Espaçamento máximo permitido (NBR 6118:2023, 18.3.4.1):&lt;br /&gt;s&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:10pt; color:#b0bec5; vertical-align:sub;&quot;&gt;max&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:10pt; color:#b0bec5;&quot;&gt; = min(0,6·d ; 30 cm) = min(0,6·155.0 ; 30) = 30 cm &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;right&quot; style=&quot; margin-top:14px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#1e1e1e;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#888888; background-color:#1e1e1e;&quot;&gt;d = 155.00 cm  |  f&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#888888; vertical-align:sub;&quot;&gt;yk&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#888888;&quot;&gt; = 500.0 MPa &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="textInteractionFlags">
+         <set>Qt::TextInteractionFlag::TextSelectableByMouse</set>
+        </property>
+       </widget>
+       <widget class="QDoubleSpinBox" name="doubleSpinBox_asw">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>20</y>
+          <width>131</width>
+          <height>23</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>100</y>
+          <width>971</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item alignment="Qt::AlignmentFlag::AlignHCenter">
+          <widget class="QPushButton" name="posicionar_e_calcular">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Posicionar Barras e Calcular</string>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_verficacao_fadiga">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>3190</y>
+         <width>971</width>
+         <height>731</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Verificação Fadiga (ELS)</string>
+       </property>
+       <widget class="QWidget" name="verticalLayoutWidget_4">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>680</y>
+          <width>961</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item alignment="Qt::AlignmentFlag::AlignHCenter">
+          <widget class="QPushButton" name="memorial_fadiga">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Memorial de Cálculo</string>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget_6">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>160</y>
+          <width>961</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <item alignment="Qt::AlignmentFlag::AlignHCenter">
+          <widget class="QPushButton" name="vereficiar_fadiga">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Verficar Fadiga</string>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="html_resumo_fadiga">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>210</y>
+          <width>901</width>
+          <height>471</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;body style='background:#1e1e2e; padding:20px;'&gt;
+    &lt;div style=&quot;font-family: 'Segoe UI', Arial, sans-serif; color: #e0e0e0;
+                background-color: #1e1e1e; padding: 18px; border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.3);&quot;&gt;
+        &lt;!-- Cabeçalho com status --&gt;
+        &lt;div style=&quot;display: flex; justify-content: space-between; align-items: center;
+                    margin-bottom: 16px;&quot;&gt;
+            &lt;span style=&quot;font-size: 14pt; font-weight: bold; color: #90caf9;&quot;&gt;
+                🔄 Fadiga da Armadura Transversal
+            &lt;/span&gt;
+            &lt;span style=&quot;background-color: #7f1d1d; color: #f87171;
+                         padding: 4px 12px; border-radius: 20px; font-weight: bold;
+                         font-size: 12pt; border: 1px solid #f87171;&quot;&gt;
+                ⚠️ ✗ REPROVADO À FADIGA
+            &lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Tabela principal --&gt;
+        &lt;table style=&quot;width: 100%; border-collapse: collapse; font-size: 11pt;&quot;&gt;
+            &lt;tr style=&quot;border-bottom: 1px solid #444;&quot;&gt;
+                &lt;td style=&quot;padding: 6px 0; color: #b0bec5;&quot;&gt;V&lt;sub&gt;d1,serv&lt;/sub&gt;&lt;/td&gt;
+                &lt;td style=&quot;padding: 6px 0; text-align: right; color: #90caf9;
+                           font-weight: bold;&quot;&gt;+800.00 kN&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style=&quot;border-bottom: 1px solid #444;&quot;&gt;
+                &lt;td style=&quot;padding: 6px 0; color: #b0bec5;&quot;&gt;V&lt;sub&gt;d2,serv&lt;/sub&gt;&lt;/td&gt;
+                &lt;td style=&quot;padding: 6px 0; text-align: right; color: #90caf9;
+                           font-weight: bold;&quot;&gt;-300.00 kN&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style=&quot;border-bottom: 1px solid #444;&quot;&gt;
+                &lt;td style=&quot;padding: 6px 0; color: #b0bec5;&quot;&gt;V&lt;sub&gt;c,fad&lt;/sub&gt; (0,5·V&lt;sub&gt;c&lt;/sub&gt;)&lt;/td&gt;
+                &lt;td style=&quot;padding: 6px 0; text-align: right; color: #90caf9;
+                           font-weight: bold;&quot;&gt;312.82 kN&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style=&quot;border-bottom: 1px solid #444;&quot;&gt;
+                &lt;td style=&quot;padding: 6px 0; color: #b0bec5;&quot;&gt;σ&lt;sub&gt;sw1&lt;/sub&gt;&lt;/td&gt;
+                &lt;td style=&quot;padding: 6px 0; text-align: right; color: #f48fb1;
+                           font-weight: bold;&quot;&gt;180.44 MPa&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style=&quot;border-bottom: 1px solid #444;&quot;&gt;
+                &lt;td style=&quot;padding: 6px 0; color: #b0bec5;&quot;&gt;σ&lt;sub&gt;sw2&lt;/sub&gt;&lt;/td&gt;
+                &lt;td style=&quot;padding: 6px 0; text-align: right; color: #f48fb1;
+                           font-weight: bold;&quot;&gt;0.00 MPa&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style=&quot;border-bottom: 1px solid #444;&quot;&gt;
+                &lt;td style=&quot;padding: 6px 0; color: #b0bec5;&quot;&gt;Δσ&lt;sub&gt;sw&lt;/sub&gt;&lt;/td&gt;
+                &lt;td style=&quot;padding: 6px 0; text-align: right; color: #f48fb1;
+                           font-weight: bold;&quot;&gt;180.44 MPa&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style=&quot;border-bottom: 1px solid #444;&quot;&gt;
+                &lt;td style=&quot;padding: 6px 0; color: #b0bec5;&quot;&gt;Δf&lt;sub&gt;sd,fad&lt;/sub&gt; (Tab. 23.2)&lt;/td&gt;
+                &lt;td style=&quot;padding: 6px 0; text-align: right; color: #b0bec5;&quot;&gt;85.0 MPa&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style=&quot;border-bottom: 1px solid #555;&quot;&gt;
+                &lt;td style=&quot;padding: 6px 0; color: #b0bec5; font-weight: bold;&quot;&gt;k&lt;sub&gt;fad&lt;/sub&gt;&lt;/td&gt;
+                &lt;td style=&quot;padding: 6px 0; text-align: right; color: #f87171;
+                           font-weight: bold; font-size: 13pt;&quot;&gt;2.1228&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+
+        
+        &lt;div style=&quot;margin-top: 8px; font-size: 9pt; color: #fbbf24; text-align: center;&quot;&gt;
+            ℹ️ Inversão de sinal do cortante → σ&lt;sub&gt;sw,min&lt;/sub&gt; = 0
+        &lt;/div&gt;
+        
+
+        &lt;!-- Bloco de armadura final --&gt;
+        &lt;div style=&quot;margin-top: 20px; background-color: #252525; padding: 14px;
+                    border-radius: 6px; text-align: center;
+                    border: 1px solid #f87171;&quot;&gt;
+            &lt;span style=&quot;font-size: 11pt; color: #b0bec5;&quot;&gt;ARMADURA TRANSVERSAL FINAL&lt;/span&gt;&lt;br&gt;
+            &lt;span style=&quot;font-size: 18pt; font-weight: bold; color: #f87171;&quot;&gt;
+                A&lt;sub&gt;sw&lt;/sub&gt;/s = 53.07 cm²/m
+            &lt;/span&gt;
+            &lt;div style=&quot;font-size: 9pt; color: #888; margin-top: 6px;&quot;&gt;
+                (ELU: 25.00 cm²/m | Fadiga: 53.07 cm²/m)
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        
+        &lt;div style=&quot;margin-top: 12px; padding: 8px; background-color: #3d1a1a;
+                    border-radius: 4px; text-align: center;&quot;&gt;
+            &lt;span style=&quot;color: #f87171; font-size: 11pt;&quot;&gt;
+                ⚠️ Armadura majorada por fadiga:&lt;br&gt;
+                A&lt;sub&gt;sw,fad&lt;/sub&gt; = k&lt;sub&gt;fad&lt;/sub&gt; · A&lt;sub&gt;sw,ELU&lt;/sub&gt; = 2.1228 · 25.00 = 53.07 cm²/m
+            &lt;/span&gt;
+        &lt;/div&gt;
+        
+
+        &lt;!-- Rodapé com norma --&gt;
+        &lt;div style=&quot;margin-top: 14px; font-size: 9pt; color: #888; text-align: right;&quot;&gt;
+            NBR 6118:2023 – Item 23.5.3 &amp;nbsp;|&amp;nbsp; Modelo I
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="textInteractionFlags">
+         <set>Qt::TextInteractionFlag::TextSelectableByMouse</set>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_17">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>411</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Amplitude de tensão admissível à fadiga  </string>
+        </property>
+        <widget class="QWidget" name="horizontalLayoutWidget_13">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>411</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_13">
+          <item alignment="Qt::AlignmentFlag::AlignHCenter">
+           <widget class="QRadioButton" name="delta_fad_automatico">
+            <property name="text">
+             <string>Automático</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignmentFlag::AlignHCenter">
+           <widget class="QRadioButton" name="delta_fad_manual">
+            <property name="text">
+             <string>Manual</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QLabel" name="label_44">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>60</y>
+           <width>51</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Times New Roman','serif'; font-size:12pt; font-style:italic; color:#ffffff;&quot;&gt;Δf&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman','serif'; font-size:12pt; font-style:italic; color:#ffffff; vertical-align:sub;&quot;&gt;fad&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman','serif'; font-size:12pt; color:#ffffff;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="doubleSpinBox_delta">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>60</y>
+           <width>101</width>
+           <height>23</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QWidget" name="horizontalLayoutWidget_14">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>90</y>
+           <width>411</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_14">
+          <item>
+           <widget class="QPushButton" name="memorial_delta">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Memorial de Cálculo</string>
+            </property>
+            <property name="autoDefault">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

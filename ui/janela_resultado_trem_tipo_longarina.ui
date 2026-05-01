@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>janela_resultado_trem_tipo_longarina</class>
+ <widget class="QDialog" name="janela_resultado_trem_tipo_longarina">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>619</width>
+    <height>690</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>619</width>
+    <height>690</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>619</width>
+    <height>690</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Resumo da Distribuição Transversal</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>601</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Resumo da Distribuição Transversal</string>
+   </property>
+   <widget class="QTableWidget" name="tabela_resumo">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>581</width>
+      <height>261</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>360</y>
+     <width>601</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Caso Crítco</string>
+   </property>
+   <widget class="QFrame" name="desenho">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>581</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="cancelar">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>650</y>
+     <width>81</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancelar</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="confirmar">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>650</y>
+     <width>81</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Confirmar</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="manual">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>650</y>
+     <width>25</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="toolTip">
+    <string>Dúvidas? Acesse o manual referente a essa janela</string>
+   </property>
+   <property name="text">
+    <string>?</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>0</y>
+     <width>421</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Memorial de Cálculo</string>
+   </property>
+   <widget class="QPushButton" name="abrir_calculo_li">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>191</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cálculo das Linhas de Influência</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="abrir_calculo_esforco">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>20</y>
+      <width>191</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cálculo do Esforço Resultante</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_5">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>0</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Exportar</string>
+   </property>
+   <widget class="QPushButton" name="exportar_tabela">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>81</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Tabela</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exportar">
+    <property name="geometry">
+     <rect>
+      <x>95</x>
+      <y>20</y>
+      <width>68</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Desenho</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

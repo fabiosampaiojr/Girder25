@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>janela_inicial</class>
+ <widget class="QDialog" name="janela_inicial">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>470</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>470</width>
+    <height>550</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>470</width>
+    <height>550</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Boas-Vindas</string>
+  </property>
+  <widget class="QPlainTextEdit" name="texto">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>141</y>
+     <width>441</width>
+     <height>361</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+   <property name="plainText">
+    <string>Este software foi desenvolvido como Trabalho de Conclusão de Curso do curso de Engenharia Civil da Escola de Engenharia de São Carlos da Universidade de São Paulo (EESC-USP).
+
+Seu objetivo é auxiliar engenheiros civis e estudantes no pré-dimensionamento de longarinas de pontes, permitindo a definição do sistema estrutural, geometria e carregamentos de forma ágil e integrada.
+
+O programa realiza automaticamente o cálculo dos coeficientes de impacto de trem-tipo, esforços devido ao peso próprio (g1), sobrecarga (g2), carga móvel e efeitos de temperatura (em sistemas hiperestáticos), por meio de um modelo baseado em elementos finitos. Ao final, são geradas as combinações de ELU e ELS, bem como o dimensionamento das armaduras longitudinais e transversais, incluindo verificação à fadiga.
+
+As ferramentas e modelos de cálculo adotados foram validados com base em referências técnicas e critérios consagrados na prática da engenharia estrutural, permitindo análises rápidas, iterativas e confiáveis.</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="avancar">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>520</y>
+     <width>81</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Avançar</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QFrame" name="logo">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>441</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Shadow::Raised</enum>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

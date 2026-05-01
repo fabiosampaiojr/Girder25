@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>janela_resultados_esforcos</class>
+ <widget class="QDialog" name="janela_resultados_esforcos">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1030</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1030</width>
+    <height>650</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1030</width>
+    <height>650</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Título Personalizado</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>1000000</width>
+       <height>100000</height>
+      </size>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarPolicy::ScrollBarAsNeeded</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>false</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-572</y>
+        <width>996</width>
+        <height>1200</height>
+       </rect>
+      </property>
+      <widget class="QGroupBox" name="groupbox_diagrama">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>981</width>
+         <height>601</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Diagrama</string>
+       </property>
+       <widget class="QFrame" name="frame_diagrama">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>16</y>
+          <width>961</width>
+          <height>571</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="btn_ok">
+       <property name="geometry">
+        <rect>
+         <x>910</x>
+         <y>1170</y>
+         <width>81</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Ok</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="manual">
+       <property name="geometry">
+        <rect>
+         <x>880</x>
+         <y>1170</y>
+         <width>25</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>Dúvidas? Acesse o manual referente a essa janela</string>
+       </property>
+       <property name="text">
+        <string>?</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupbox_tabela">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>610</y>
+         <width>661</width>
+         <height>551</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Tabela:</string>
+       </property>
+       <widget class="QTableWidget" name="tabela_esforcos">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>641</width>
+          <height>501</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_resumo_visualizacao">
+        <property name="geometry">
+         <rect>
+          <x>18</x>
+          <y>525</y>
+          <width>631</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Visualizando: 140 de 2500 pontos.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_5">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>1100</y>
+         <width>301</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Exportar</string>
+       </property>
+       <widget class="QWidget" name="horizontalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>281</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="exportar_tabela">
+           <property name="text">
+            <string>Tabela</string>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="exportar">
+           <property name="text">
+            <string>Desenho</string>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>610</y>
+         <width>301</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Configurações de Visualização</string>
+       </property>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>121</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Passo de Visualização:</string>
+        </property>
+       </widget>
+       <widget class="QDoubleSpinBox" name="doubleSpinBox_passo_visualizacao">
+        <property name="geometry">
+         <rect>
+          <x>131</x>
+          <y>20</y>
+          <width>121</width>
+          <height>23</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_arredondar">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>50</y>
+          <width>281</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Arredondar Valores</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="atualizar_tabela">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>110</y>
+          <width>281</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Atualizar Tabela</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_destacar">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>80</y>
+          <width>281</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Destacar Seções Críticas</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>760</y>
+         <width>301</width>
+         <height>331</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Resumo das Seções Críticas</string>
+       </property>
+       <widget class="QTextEdit" name="textEdit_resumo">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>281</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

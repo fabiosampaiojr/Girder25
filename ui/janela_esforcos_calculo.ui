@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>janela_esforcos_calculo</class>
+ <widget class="QDialog" name="janela_esforcos_calculo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1030</width>
+    <height>670</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1030</width>
+    <height>670</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1030</width>
+    <height>670</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Análise da Carga Móvel</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>1000000</width>
+       <height>100000</height>
+      </size>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarPolicy::ScrollBarAsNeeded</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>false</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-931</y>
+        <width>997</width>
+        <height>1650</height>
+       </rect>
+      </property>
+      <widget class="QPushButton" name="confirmar">
+       <property name="geometry">
+        <rect>
+         <x>910</x>
+         <y>1620</y>
+         <width>81</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Confirmar</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="cancelar">
+       <property name="geometry">
+        <rect>
+         <x>820</x>
+         <y>1620</y>
+         <width>81</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Cancelar</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="manual">
+       <property name="geometry">
+        <rect>
+         <x>790</x>
+         <y>1620</y>
+         <width>25</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>Dúvidas? Acesse o manual referente a essa janela</string>
+       </property>
+       <property name="text">
+        <string>?</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="calcular">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>930</y>
+         <width>271</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>CALCULAR ENVOLTÓRIAS</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>1060</y>
+         <width>621</width>
+         <height>581</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Resumo das Seções Críticas</string>
+       </property>
+       <widget class="QTextEdit" name="html_resultados_esforcos_calculos">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>601</width>
+          <height>551</height>
+         </rect>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot; bgcolor=&quot;#1e1e1e&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:14px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#252525;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:14pt; font-weight:700; color:#90caf9; background-color:#252525;&quot;&gt;Cortante &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#252525;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:11pt; font-weight:700; color:#e0e0e0;&quot;&gt;Máximo em S10 (45.00 m):&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:11pt; color:#e0e0e0;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#e0e0e0;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt;V&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0; vertical-align:sub;&quot;&gt;min&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt; = &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e57373;&quot;&gt;-50.30 kN&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt;  |  V&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0; vertical-align:sub;&quot;&gt;max&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt; = &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#81c784;&quot;&gt;+1029.30 kN&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#252525;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:11pt; font-weight:700; color:#e0e0e0;&quot;&gt;Mínimo em S5 (22.50 m):&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:11pt; color:#e0e0e0;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#e0e0e0;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt;V&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0; vertical-align:sub;&quot;&gt;min&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt; = &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e57373;&quot;&gt;-200.00 kN&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt;  |  V&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0; vertical-align:sub;&quot;&gt;max&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt; = &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#81c784;&quot;&gt;+573.20 kN&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:11.5pt; font-weight:700; color:#ffffff;&quot;&gt;Convenção:&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; color:#e0e0e0;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:6px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; font-weight:700; color:#81c784;&quot;&gt;(+) Cortante Positivo:&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; color:#e0e0e0;&quot;&gt; Rotação horária → &lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; font-weight:700; color:#e0e0e0;&quot;&gt;Tração diagonal (/) → Estribos&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; color:#e0e0e0;&quot;&gt; &lt;br /&gt;&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; font-weight:700; color:#e57373;&quot;&gt;(-) Cortante Negativo:&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; color:#e0e0e0;&quot;&gt; Rotação anti-horária → &lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; font-weight:700; color:#e0e0e0;&quot;&gt;Tração diagonal (\) → Estribos&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; color:#e0e0e0;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#e0e0e0;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:14px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#252525;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:14pt; font-weight:700; color:#90caf9; background-color:#252525;&quot;&gt;Momento &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#252525;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:11pt; font-weight:700; color:#e0e0e0;&quot;&gt;Máximo em S7 (31.50 m):&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:11pt; color:#e0e0e0;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#e0e0e0;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt;M&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0; vertical-align:sub;&quot;&gt;min&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt; = &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e57373;&quot;&gt;-1200.00 kN·m&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt;  |  M&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0; vertical-align:sub;&quot;&gt;max&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt; = &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#81c784;&quot;&gt;+3500.80 kN·m&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#252525;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:11pt; font-weight:700; color:#e0e0e0;&quot;&gt;Mínimo em S2 (9.00 m):&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:11pt; color:#e0e0e0;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#e0e0e0;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt;M&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0; vertical-align:sub;&quot;&gt;min&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt; = &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e57373;&quot;&gt;-2500.50 kN·m&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt;  |  M&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0; vertical-align:sub;&quot;&gt;max&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt; = &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#81c784;&quot;&gt;+800.00 kN·m&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:13pt; font-weight:700; color:#ffffff;&quot;&gt;Convenção:&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:11pt; color:#e0e0e0;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:8px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:11pt; font-weight:700; color:#81c784;&quot;&gt;(+) Positivo:&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:11pt; color:#e0e0e0;&quot;&gt; Tração embaixo → &lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:11pt; font-weight:700; color:#e0e0e0;&quot;&gt;Armadura Inferior&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:11pt; color:#e0e0e0;&quot;&gt; &lt;br /&gt;&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:11pt; font-weight:700; color:#e57373;&quot;&gt;(-) Negativo:&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:11pt; color:#e0e0e0;&quot;&gt; Tração em cima → &lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:11pt; font-weight:700; color:#e0e0e0;&quot;&gt;Armadura Superior&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:11pt; color:#e0e0e0;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#e0e0e0;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:14px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#252525;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:14pt; font-weight:700; color:#90caf9; background-color:#252525;&quot;&gt;Reações &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#252525;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:11pt; font-weight:700; color:#e0e0e0;&quot;&gt;Máximo em Apoio A (0.00 m):&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:11pt; color:#e0e0e0;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#e0e0e0;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt;R&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0; vertical-align:sub;&quot;&gt;min&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt; = &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e57373;&quot;&gt;-150.00 kN&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt;  |  R&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0; vertical-align:sub;&quot;&gt;max&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt; = &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#81c784;&quot;&gt;+320.50 kN&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#252525;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:11pt; font-weight:700; color:#e0e0e0;&quot;&gt;Mínimo em Apoio B (60.00 m):&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; font-size:11pt; color:#e0e0e0;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','Arial','sans-serif'; color:#e0e0e0;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt;R&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0; vertical-align:sub;&quot;&gt;min&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt; = &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e57373;&quot;&gt;-200.00 kN&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt;  |  R&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0; vertical-align:sub;&quot;&gt;max&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt; = &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#81c784;&quot;&gt;+50.00 kN&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New','monospace'; font-size:12.5pt; font-weight:700; color:#e0e0e0;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:11.5pt; font-weight:700; color:#ffffff;&quot;&gt;Convenção:&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; color:#e0e0e0;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:6px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; font-weight:700; color:#81c784;&quot;&gt;(+) Para cima:&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; color:#e0e0e0;&quot;&gt; Reação vertical ascendente. &lt;br /&gt;&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; font-weight:700; color:#e57373;&quot;&gt;(-) Para baixo:&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; color:#e0e0e0;&quot;&gt; Reação vertical descendente. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_5">
+       <property name="geometry">
+        <rect>
+         <x>660</x>
+         <y>1060</y>
+         <width>321</width>
+         <height>181</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Visualizar Detalhes</string>
+       </property>
+       <widget class="QPushButton" name="botao_cortante">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>301</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Cortante</string>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="botao_momento">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>80</y>
+          <width>301</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Momento Fletor</string>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="botao_reacoes">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>130</y>
+          <width>301</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Reação de Apoio</string>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_coef">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>971</width>
+         <height>441</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Estados Limite de Cálculo</string>
+       </property>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>20</y>
+          <width>651</width>
+          <height>411</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, user-scalable=yes&quot;&gt;
+    &lt;title&gt;Combinações de Esforços - NBR 6118:2023&lt;/title&gt;
+    &lt;style&gt;
+        /* Pequeno reset para garantir consistência entre navegadores */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #2b2b2b;
+            color: #ffffff;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 24px 20px;
+            line-height: 1.4;
+        }
+        /* Estilos globais para melhor legibilidade dos símbolos matemáticos */
+        .math-equation {
+            font-family: 'Times New Roman', 'Georgia', serif;
+            font-size: 18pt;
+            padding: 28px 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.04);
+            border-radius: 12px;
+            border: 1px solid #4a4a4a;
+            transition: all 0.2s;
+            word-break: break-word;
+            letter-spacing: 0.3px;
+        }
+        /* Bloco de título com destaque lateral */
+        .section-title {
+            color: #f1c40f;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+            margin-bottom: 16px;
+            border-left: 4px solid #f1c40f;
+            padding-left: 14px;
+            text-transform: none;
+        }
+        /* Cada bloco principal (ELU / ELS) com espaçamento bem definido */
+        .block-equation {
+            margin-bottom: 52px;   /* Espaço generoso entre os blocos de equação */
+        }
+        /* Último bloco de equação não precisa de margem extra inferior se houver legenda,
+           mas mantemos consistência; a legenda terá seu próprio espaçamento superior */
+        .block-equation:last-of-type {
+            margin-bottom: 48px;
+        }
+        /* Container da legenda - totalmente diferente do fundo das equações */
+        .legend-container {
+            background-color: #212121;  /* tom escuro sólido, diferente do fundo translúcido das equações */
+            border: 1px solid #5f5f5f;
+            border-radius: 14px;
+            padding: 24px 28px;
+            margin-top: 16px;
+            margin-bottom: 28px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            transition: background 0.2s;
+        }
+        /* Estilo do título da legenda, alinhado visualmente com os títulos das equações */
+        .legend-heading {
+            color: #f1c40f;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            border-left: 4px solid #f1c40f;
+            padding-left: 14px;
+            letter-spacing: 0.2px;
+        }
+        /* Cada linha de definição na legenda */
+        .legend-item {
+            margin-bottom: 12px;
+            line-height: 1.55;
+            font-size: 0.9rem;
+            color: #e0e0e0;
+        }
+        .legend-item b {
+            color: #f5f5f5;
+            font-weight: 600;
+        }
+        .legend-item sub, .legend-item sup {
+            font-size: 0.75rem;
+        }
+        /* pequeno ajuste para ícones matemáticos dentro da legenda */
+        .legend-item i {
+            font-style: italic;
+        }
+        /* rodapé de referência */
+        .ref-footer {
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 0.75rem;
+            color: #f1c40f;
+            text-align: right;
+            border-top: 1px dashed #5a5a5a;
+            padding-top: 14px;
+            margin-top: 12px;
+            opacity: 0.85;
+        }
+        /* responsividade: reduzir padding em telas pequenas */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px 12px;
+            }
+            .math-equation {
+                font-size: 15pt;
+                padding: 20px 12px;
+            }
+            .legend-container {
+                padding: 18px 20px;
+            }
+            .block-equation {
+                margin-bottom: 40px;
+            }
+        }
+        /* pequena correção para garantir quebra de linha em equações longas */
+        .math-equation br {
+            display: none;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- BLOCO 1: ELU - Estado Limite Último --&gt;
+    &lt;div class=&quot;block-equation&quot;&gt;
+        &lt;div class=&quot;section-title&quot;&gt;
+            ELU — Estado Limite Último: Combinação Normal
+        &lt;/div&gt;
+        &lt;div class=&quot;math-equation&quot;&gt;
+            &lt;i&gt;F&lt;/i&gt;&lt;sub&gt;d&lt;/sub&gt; = &amp;gamma;&lt;sub&gt;g&lt;/sub&gt;&lt;i&gt;F&lt;/i&gt;&lt;sub&gt;gk&lt;/sub&gt; + 
+            &amp;gamma;&lt;sub&gt;q&lt;/sub&gt; (&lt;i&gt;F&lt;/i&gt;&lt;sub&gt;q1k&lt;/sub&gt; + &amp;Sigma;&amp;psi;&lt;sub&gt;0j&lt;/sub&gt;&lt;i&gt;F&lt;/i&gt;&lt;sub&gt;qjk&lt;/sub&gt;) + 
+            &amp;gamma;&lt;sub&gt;&amp;epsilon;q&lt;/sub&gt;&amp;psi;&lt;sub&gt;0&amp;epsilon;&lt;/sub&gt;&lt;i&gt;F&lt;/i&gt;&lt;sub&gt;&amp;epsilon;qk&lt;/sub&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- BLOCO 2: ELS - Estado Limite de Serviço (Combinação Frequente) --&gt;
+    &lt;div class=&quot;block-equation&quot;&gt;
+        &lt;div class=&quot;section-title&quot;&gt;
+            ELS — Estado Limite de Serviço: Combinação Frequente
+        &lt;/div&gt;
+        &lt;div class=&quot;math-equation&quot;&gt;
+            &lt;i&gt;F&lt;/i&gt;&lt;sub&gt;d,ser&lt;/sub&gt; = &amp;Sigma;&lt;i&gt;F&lt;/i&gt;&lt;sub&gt;gi,k&lt;/sub&gt; + 
+            &amp;psi;&lt;sub&gt;1&lt;/sub&gt;&lt;i&gt;F&lt;/i&gt;&lt;sub&gt;q1k&lt;/sub&gt; + &amp;Sigma;&amp;psi;&lt;sub&gt;2j&lt;/sub&gt;&lt;i&gt;F&lt;/i&gt;&lt;sub&gt;qj,k&lt;/sub&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- LEGENDA: agora com fundo completamente distinto das equações, melhor hierarquia visual --&gt;
+    &lt;div class=&quot;legend-container&quot;&gt;
+        &lt;div class=&quot;legend-heading&quot;&gt;
+            Legenda dos Componentes
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;legend-item&quot;&gt;
+            &lt;b&gt;&lt;i&gt;F&lt;/i&gt;&lt;sub&gt;gk&lt;/sub&gt; / &lt;i&gt;F&lt;/i&gt;&lt;sub&gt;gi,k&lt;/sub&gt;:&lt;/b&gt; Esforços/Ações Permanentes (Peso Próprio, Pavimentação e Guarda-rodas)
+        &lt;/div&gt;
+        &lt;div class=&quot;legend-item&quot;&gt;
+            &lt;b&gt;&lt;i&gt;F&lt;/i&gt;&lt;sub&gt;q1k&lt;/sub&gt;:&lt;/b&gt; Ação Variável Principal (Carga Móvel / Trem‑tipo)
+        &lt;/div&gt;
+        &lt;div class=&quot;legend-item&quot;&gt;
+            &lt;b&gt;&lt;i&gt;F&lt;/i&gt;&lt;sub&gt;qjk&lt;/sub&gt; / &lt;i&gt;F&lt;/i&gt;&lt;sub&gt;&amp;epsilon;qk&lt;/sub&gt;:&lt;/b&gt; Ações Variáveis Secundárias e Efeitos de Recalque ou Temperatura
+        &lt;/div&gt;
+        &lt;div class=&quot;legend-item&quot;&gt;
+            &lt;b&gt;&amp;gamma;&lt;sub&gt;g&lt;/sub&gt;, &amp;gamma;&lt;sub&gt;q&lt;/sub&gt;, &amp;gamma;&lt;sub&gt;&amp;epsilon;q&lt;/sub&gt;:&lt;/b&gt; Coeficientes de ponderação das ações (Majoradores)
+        &lt;/div&gt;
+        &lt;div class=&quot;legend-item&quot;&gt;
+            &lt;b&gt;&amp;psi;&lt;sub&gt;0&lt;/sub&gt;, &amp;psi;&lt;sub&gt;1&lt;/sub&gt;, &amp;psi;&lt;sub&gt;2&lt;/sub&gt;:&lt;/b&gt; Fatores de redução para combinações (Simultaneidade e Frequência)
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Referência normativa --&gt;
+    &lt;div class=&quot;ref-footer&quot;&gt;
+        Referência: NBR 6118:2023
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</string>
+        </property>
+        <property name="textInteractionFlags">
+         <set>Qt::TextInteractionFlag::TextSelectableByMouse</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="box_coef">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>460</y>
+         <width>971</width>
+         <height>441</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Coeficientes de Cálculo</string>
+       </property>
+       <widget class="QRadioButton" name="radio_automatico">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>30</y>
+          <width>101</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Normativo</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radio_personalizado">
+        <property name="geometry">
+         <rect>
+          <x>680</x>
+          <y>30</y>
+          <width>111</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Personalizado</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="html_normativo">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>60</y>
+          <width>391</width>
+          <height>371</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>    &lt;html&gt;
+    &lt;body style='background-color: #2b2b2b; color: #ffffff; font-family: &quot;Segoe UI&quot;, sans-serif; padding: 15px;'&gt;
+        &lt;table style='width: 100%; border-collapse: collapse; font-size: 10pt; table-layout: fixed;'&gt;
+            &lt;tr&gt;
+                &lt;td colspan=&quot;2&quot; style='padding: 5px 0 10px 0;'&gt;
+                    &lt;b style='color: #f1c40f; font-size: 11pt;'&gt;COEFICIENTES DE PONDERAÇÃO&lt;/b&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style='border-bottom: 1px solid #444;'&gt;
+                &lt;td style='padding: 8px 0; vertical-align: middle; width: 65%;'&gt;Ações permanentes (&amp;gamma;&lt;sub&gt;g&lt;/sub&gt;):&lt;/td&gt;
+                &lt;td style='text-align: right; font-weight: bold; vertical-align: middle; width: 35%;'&gt;1,35 &lt;span style='font-size: 8pt; color: #aaa; font-weight: normal;'&gt;(desf.)&lt;/span&gt; / 1,0&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style='border-bottom: 1px solid #444;'&gt;
+                &lt;td style='padding: 8px 0; vertical-align: middle;'&gt;Ações variáveis (&amp;gamma;&lt;sub&gt;q&lt;/sub&gt;):&lt;/td&gt;
+                &lt;td style='text-align: right; font-weight: bold; vertical-align: middle;'&gt;1,50&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style='border-bottom: 1px solid #444;'&gt;
+                &lt;td style='padding: 8px 0; vertical-align: middle;'&gt;Variações de temperatura (&amp;gamma;&lt;sub&gt;&amp;epsilon;q&lt;/sub&gt;):&lt;/td&gt;
+                &lt;td style='text-align: right; font-weight: bold; vertical-align: middle;'&gt;1,20&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;&lt;td colspan=&quot;2&quot; style='padding: 10px 0;'&gt;&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td colspan=&quot;2&quot; style='padding: 5px 0 10px 0;'&gt;
+                    &lt;b style='color: #f1c40f; font-size: 11pt;'&gt;FATORES DE COMBINAÇÃO E REDUÇÃO&lt;/b&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style='border-bottom: 1px solid #444;'&gt;
+                &lt;td style='padding: 8px 0; vertical-align: middle;'&gt;Fator de combinação (&amp;psi;&lt;sub&gt;0&lt;/sub&gt;):&lt;/td&gt;
+                &lt;td style='text-align: right; font-weight: bold; vertical-align: middle;'&gt;0,60&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style='border-bottom: 1px solid #444;'&gt;
+                &lt;td style='padding: 8px 0; vertical-align: middle;'&gt;Redução Ação Móvel (&amp;psi;&lt;sub&gt;1&lt;/sub&gt;):&lt;/td&gt;
+                &lt;td style='text-align: right; font-weight: bold; vertical-align: middle;'&gt;0,50&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style='border-bottom: 1px solid #444;'&gt;
+                &lt;td style='padding: 8px 0; vertical-align: middle;'&gt;Redução Temperatura (&amp;psi;&lt;sub&gt;2&lt;/sub&gt;):&lt;/td&gt;
+                &lt;td style='text-align: right; font-weight: bold; vertical-align: middle;'&gt;0,30&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;div style='font-family: &quot;Segoe UI&quot;, sans-serif; font-size: 8.5pt; color: #f1c40f; padding-top: 10px; text-align: right; border-top: 1px dashed #444; margin-top: 20px;'&gt;
+            Referência: NBR 8681:2003
+        &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;</string>
+        </property>
+        <property name="textInteractionFlags">
+         <set>Qt::TextInteractionFlag::TextSelectableByMouse</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="html_personalizado">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>45</y>
+          <width>391</width>
+          <height>371</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;
+    &lt;body style='background-color: #2b2b2b; color: #777777; font-family: &quot;Segoe UI&quot;, sans-serif; padding: 15px;'&gt;
+        &lt;table style='width: 100%; border-collapse: collapse; font-size: 10pt; table-layout: fixed;'&gt;
+            &lt;tr&gt;
+                &lt;td colspan=&quot;2&quot; style='padding: 5px 0 10px 0;'&gt;
+                    &lt;b style='color: #555555; font-size: 11pt;'&gt;COEFICIENTES DE PONDERAÇÃO&lt;/b&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style='border-bottom: 1px solid #333333;'&gt;
+                &lt;td style='padding: 8px 0; vertical-align: middle; width: 65%;'&gt;Ações permanentes (&amp;gamma;&lt;sub&gt;g&lt;/sub&gt;):&lt;/td&gt;
+                &lt;td style='text-align: right; font-weight: bold; vertical-align: middle; width: 35%;'&gt;---&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style='border-bottom: 1px solid #333333;'&gt;
+                &lt;td style='padding: 8px 0; vertical-align: middle;'&gt;Ações variáveis (&amp;gamma;&lt;sub&gt;q&lt;/sub&gt;):&lt;/td&gt;
+                &lt;td style='text-align: right; font-weight: bold; vertical-align: middle;'&gt;---&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style='border-bottom: 1px solid #333333;'&gt;
+                &lt;td style='padding: 8px 0; vertical-align: middle;'&gt;Variações de temperatura (&amp;gamma;&lt;sub&gt;&amp;epsilon;q&lt;/sub&gt;):&lt;/td&gt;
+                &lt;td style='text-align: right; font-weight: bold; vertical-align: middle;'&gt;---&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;&lt;td colspan=&quot;2&quot; style='padding: 10px 0;'&gt;&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td colspan=&quot;2&quot; style='padding: 5px 0 10px 0;'&gt;
+                    &lt;b style='color: #555555; font-size: 11pt;'&gt;FATORES DE COMBINAÇÃO E REDUÇÃO&lt;/b&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style='border-bottom: 1px solid #333333;'&gt;
+                &lt;td style='padding: 8px 0; vertical-align: middle;'&gt;Fator de combinação (&amp;psi;&lt;sub&gt;0&lt;/sub&gt;):&lt;/td&gt;
+                &lt;td style='text-align: right; font-weight: bold; vertical-align: middle;'&gt;---&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style='border-bottom: 1px solid #333333;'&gt;
+                &lt;td style='padding: 8px 0; vertical-align: middle;'&gt;Redução Ação Móvel (&amp;psi;&lt;sub&gt;1&lt;/sub&gt;):&lt;/td&gt;
+                &lt;td style='text-align: right; font-weight: bold; vertical-align: middle;'&gt;---&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style='border-bottom: 1px solid #333333;'&gt;
+                &lt;td style='padding: 8px 0; vertical-align: middle;'&gt;Redução Temperatura (&amp;psi;&lt;sub&gt;2&lt;/sub&gt;):&lt;/td&gt;
+                &lt;td style='text-align: right; font-weight: bold; vertical-align: middle;'&gt;---&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QDoubleSpinBox" name="spin_gama_g">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>115</y>
+          <width>84</width>
+          <height>23</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QDoubleSpinBox" name="spin_gama_q">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>151</y>
+          <width>84</width>
+          <height>23</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QDoubleSpinBox" name="spin_gama_temp_q">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>186</y>
+          <width>84</width>
+          <height>23</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QDoubleSpinBox" name="spin_psi0">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>292</y>
+          <width>84</width>
+          <height>23</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QDoubleSpinBox" name="spin_psi1">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>325</y>
+          <width>84</width>
+          <height>23</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QDoubleSpinBox" name="spin_psi2">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>360</y>
+          <width>84</width>
+          <height>23</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Line" name="line_5">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>30</y>
+          <width>16</width>
+          <height>401</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Orientation::Vertical</enum>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>980</y>
+         <width>701</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Visualizar Resultados</string>
+       </property>
+       <widget class="QWidget" name="horizontalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>701</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item alignment="Qt::AlignmentFlag::AlignHCenter">
+          <widget class="QRadioButton" name="radio_elu">
+           <property name="text">
+            <string>Estado Limite Último (ELU)</string>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignmentFlag::AlignHCenter">
+          <widget class="QRadioButton" name="radio_els">
+           <property name="text">
+            <string>Estado Limite de Serviço (ELS)</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

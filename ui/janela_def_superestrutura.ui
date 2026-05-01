@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>janela_def_superestrutura</class>
+ <widget class="QDialog" name="janela_def_superestrutura">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1040</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1040</width>
+    <height>550</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1040</width>
+    <height>550</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Definição do Sistema Estrutural</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>311</width>
+     <height>541</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Definição da Ponte</string>
+   </property>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>435</y>
+      <width>291</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Laje de Transição</string>
+    </property>
+    <widget class="QCheckBox" name="check_laje">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>20</y>
+       <width>161</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Incluir Laje de Transição</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_laje">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>161</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Comprimento da Laje:</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="input_laje">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>60</y>
+       <width>121</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>291</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Sistema Estrutural</string>
+    </property>
+    <widget class="QComboBox" name="input_tipo">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>271</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Isostática: Biapoiada com Balanço</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Isostática: Múltiplos Vãos Biapoioados</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Hiperestática: Vão Contínuo com Balanço</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Hiperestática: Vão Contínuo sem Balanço</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>104</y>
+      <width>291</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Distribuição dos Vãos</string>
+    </property>
+    <widget class="QTableWidget" name="tabela_config">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>80</y>
+       <width>251</width>
+       <height>231</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radio_automatico">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>20</y>
+       <width>98</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Automático</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radio_manual">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>20</y>
+       <width>98</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Manual</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="calcular">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>251</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Calcular Distribuição Inicial Recomendada</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>10</y>
+     <width>696</width>
+     <height>441</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Visualização da Estrutura (Diagrama de Corpo Livre)</string>
+   </property>
+   <widget class="QFrame" name="desenho">
+    <property name="geometry">
+     <rect>
+      <x>6</x>
+      <y>60</y>
+      <width>685</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="atualizar">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>30</y>
+      <width>151</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Atualizar Visualização</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exportar">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>400</y>
+      <width>81</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Exportar</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="confirmar">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>520</y>
+     <width>81</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Confirmar</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancelar">
+   <property name="geometry">
+    <rect>
+     <x>850</x>
+     <y>520</y>
+     <width>81</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancelar</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="manual">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>520</y>
+     <width>25</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="toolTip">
+    <string>Dúvidas? Acesse o manual referente a essa janela</string>
+   </property>
+   <property name="text">
+    <string>?</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

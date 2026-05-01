@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>janela_memorial_esforco_resultante</class>
+ <widget class="QDialog" name="janela_memorial_esforco_resultante">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1030</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1030</width>
+    <height>650</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1030</width>
+    <height>650</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Memorial Cálculo do Esforço Resultante</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>1000000</width>
+       <height>100000</height>
+      </size>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarPolicy::ScrollBarAsNeeded</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>false</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-13</y>
+        <width>997</width>
+        <height>1591</height>
+       </rect>
+      </property>
+      <widget class="QPushButton" name="confirmar">
+       <property name="geometry">
+        <rect>
+         <x>900</x>
+         <y>1560</y>
+         <width>81</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>OK</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="manual">
+       <property name="geometry">
+        <rect>
+         <x>870</x>
+         <y>1560</y>
+         <width>25</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>Dúvidas? Acesse o manual referente a essa janela</string>
+       </property>
+       <property name="text">
+        <string>?</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>281</width>
+         <height>271</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Relação Fundamental</string>
+       </property>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>261</width>
+          <height>251</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>&lt;div style=&quot;font-family: 'Times New Roman', serif; font-size: 13pt; line-height: 1.6;&quot;&gt;
+    &lt;div style=&quot;font-size: 18pt; margin-bottom: 15px; display: flex; align-items: middle;&quot;&gt;
+        &lt;i&gt;E&lt;/i&gt; = &lt;i&gt;q&lt;/i&gt; · &lt;span style=&quot;font-size: 26pt; vertical-align: -15%;&quot;&gt;∫&lt;/span&gt; &lt;i&gt;y&lt;/i&gt;(&lt;i&gt;x&lt;/i&gt;)&lt;i&gt;dx&lt;/i&gt;
+    &lt;/div&gt;
+
+    &lt;div style=&quot;border-top: 1px solid #444; width: 100px; margin-bottom: 10px;&quot;&gt;&lt;/div&gt;
+
+    &lt;div style=&quot;font-size: 11pt;&quot;&gt;
+        &lt;b style=&quot;font-size: 12pt;&quot;&gt;onde:&lt;/b&gt;
+        &lt;ul style=&quot;list-style-type: none; margin-left: -25px; margin-top: 5px;&quot;&gt;
+            &lt;li style=&quot;margin-bottom: 8px;&quot;&gt;
+                • &lt;b&gt;&lt;i&gt;E&lt;/i&gt;&lt;/b&gt;: é o esforço resultante (kNm ou kN, conforme o tipo de solicitação analisada);
+            &lt;/li&gt;
+            &lt;li style=&quot;margin-bottom: 8px;&quot;&gt;
+                • &lt;b&gt;&lt;i&gt;q&lt;/i&gt;&lt;/b&gt;: é a intensidade da carga distribuída (kN/m);
+            &lt;/li&gt;
+            &lt;li&gt;
+                • &lt;b&gt;&lt;i&gt;y&lt;/i&gt;(&lt;i&gt;x&lt;/i&gt;)&lt;/b&gt;: é o valor da ordenada da linha de influência no ponto de aplicação &lt;i&gt;x&lt;/i&gt;.
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+        <property name="textInteractionFlags">
+         <set>Qt::TextInteractionFlag::TextSelectableByMouse</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>0</y>
+         <width>691</width>
+         <height>271</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Resumo Cálculo dos Esforços</string>
+       </property>
+       <widget class="QTableWidget" name="tabela_resumo">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>671</width>
+          <height>245</height>
+         </rect>
+        </property>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_5">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>280</y>
+         <width>211</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Exportar</string>
+       </property>
+       <widget class="QPushButton" name="exportar_tabela">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>91</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Tabela</string>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="exportar">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>20</y>
+          <width>91</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Desenho</string>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>280</y>
+         <width>611</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Desenho</string>
+       </property>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>241</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Selecione a Longarina que deseja visualizar:</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="combo_longarina">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>20</y>
+          <width>161</width>
+          <height>26</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="combo_exibir_anotacao">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>20</y>
+          <width>171</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Exibir Detalhes de Cálculo</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_4">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>340</y>
+         <width>981</width>
+         <height>600</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Seção AA</string>
+       </property>
+       <widget class="QFrame" name="desenho_1">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>961</width>
+          <height>571</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_6">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>950</y>
+         <width>981</width>
+         <height>600</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Seção BB</string>
+       </property>
+       <widget class="QFrame" name="desenho_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>961</width>
+          <height>571</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="memorial_completo">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>300</y>
+         <width>131</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Memorial Completo</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

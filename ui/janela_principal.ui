@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Janela_Principal</class>
+ <widget class="QMainWindow" name="Janela_Principal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>900</width>
+    <height>650</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>900</width>
+    <height>650</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>881</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Etapa 1: Geometria</string>
+    </property>
+    <widget class="QPushButton" name="definir_super_estrutura">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>211</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Sistema Estrutural</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="definir_sec_transversal">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>211</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Seção Trasnversal</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="definir_geometria_super">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>211</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Superestrutura</string>
+     </property>
+    </widget>
+    <widget class="Line" name="line">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>38</y>
+       <width>861</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>78</y>
+       <width>861</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="html_status_sistema">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>20</y>
+       <width>611</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;span style='font-family: Segoe UI; font-size: 13px; color: #BBBBBB;'&gt;&lt;span style='color: #FFB74D;'&gt;●&lt;/span&gt; &lt;i&gt;Definir o tipo de arranjo estrutural (Vãos e Apoios).&lt;/i&gt;&lt;/span&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="html_status_secao">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>60</y>
+       <width>641</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;span style='font-family: Segoe UI; font-size: 13px; color: #81C784;'&gt;&lt;b&gt;✅ Seção Definida:&lt;/b&gt; &lt;span style='color: #64B5F6;'&gt; Largura: &lt;b&gt;1280 cm&lt;/b&gt; | Classe de Projeto: &lt;b&gt;II&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="html_status_superestrutura">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>100</y>
+       <width>641</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;span style='font-family: Segoe UI; font-size: 13px; color: #81C784;'&gt;&lt;b&gt;✅ Geometria Definida:&lt;/b&gt; &lt;span style='color: #64B5F6;'&gt; &lt;b&gt;5&lt;/b&gt; Longarinas (H = &lt;b&gt;125 cm&lt;/b&gt;)&lt;/span&gt;&lt;/span&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="manual">
+     <property name="geometry">
+      <rect>
+       <x>850</x>
+       <y>20</y>
+       <width>25</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>Dúvidas? Acesse o manual referente a essa janela</string>
+     </property>
+     <property name="text">
+      <string>?</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>881</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Etapa 2: Configuração da Carga Móvel</string>
+    </property>
+    <widget class="QPushButton" name="coef_impacto">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>211</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Coeficiente de Impacto</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="trem_tipo_longarina">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>211</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Trem Tipo Longitudinal</string>
+     </property>
+    </widget>
+    <widget class="Line" name="line_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>38</y>
+       <width>861</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="html_status_coef_impacto">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>20</y>
+       <width>651</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;span style='font-family: Segoe UI; font-size: 13px; color: #BBBBBB;'&gt;&lt;span style='color: #FFB74D;'&gt;●&lt;/span&gt; &lt;i&gt;Calcular coeficientes de amplificação dinâmica (CIA, CIV e CNF).&lt;/i&gt;&lt;/span&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="html_trem_tipo">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>60</y>
+       <width>651</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;span style='font-family: Segoe UI; font-size: 13px; color: #BBBBBB;'&gt;&lt;span style='color: #FFB74D;'&gt;●&lt;/span&gt; &lt;i&gt;Configurar cargas móveis longitudinais (Trem Tipo).&lt;/i&gt;&lt;/span&gt;</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>270</y>
+      <width>881</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Etapa 3: Análise das Ações na Superestrutura</string>
+    </property>
+    <widget class="QPushButton" name="peso_proprio">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>211</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Peso Próprio</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="sobre_carga">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>211</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Sobrecarga</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="temperatura">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>211</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Temperatura</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="carga_movel">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>140</y>
+       <width>211</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Carga Móvel</string>
+     </property>
+    </widget>
+    <widget class="Line" name="line_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>38</y>
+       <width>861</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>78</y>
+       <width>861</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>118</y>
+       <width>861</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="html_esforcos_g1">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>20</y>
+       <width>651</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;span style='font-family: Segoe UI; font-size: 13px; color: #EF5350;'&gt;&lt;b&gt;⚠️ Bloqueado:&lt;/b&gt; &lt;i&gt;Requer conclusão de toda a Etapa 1 (Geometria).&lt;/i&gt;&lt;/span&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="html_esforcos_g2">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>60</y>
+       <width>641</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;span style='font-family: Segoe UI; font-size: 13px; color: #81C784;'&gt;&lt;b&gt;✅ Peso Próprio Calculado:&lt;/b&gt; &lt;span style='color: #64B5F6;'&gt;R&lt;sub&gt;max&lt;/sub&gt;: &lt;b&gt;1420 kN&lt;/b&gt; | V: &lt;b&gt;[-122 / 2222.45] kN&lt;/b&gt; | M: &lt;b&gt;[-1404 / 1200] kNm&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="html_status_temperatura">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>100</y>
+       <width>651</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;span style='font-family: Segoe UI; font-size: 13px; color: #EF5350;'&gt;&lt;b&gt;⚠️ Bloqueado:&lt;/b&gt; &lt;i&gt;Requer conclusão de toda a Etapa 1 (Geometria).&lt;/i&gt;&lt;/span&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="html_status_carga_movel">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>140</y>
+       <width>651</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;span style='font-family: Segoe UI; font-size: 13px; color: #EF5350;'&gt;&lt;b&gt;⚠️ Bloqueado:&lt;/b&gt; &lt;i&gt;Requer conclusão das Etapas 1 (Geometria) e 2 (Cargas).&lt;/i&gt;&lt;/span&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="html_status_carga_movel_2">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>180</y>
+       <width>651</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;span style='font-family: Segoe UI; font-size: 13px; color: #EF5350;'&gt;&lt;b&gt;⚠️ Bloqueado:&lt;/b&gt; &lt;i&gt;Requer conclusão das Etapas 1 (Geometria) e 2 (Cargas).&lt;/i&gt;&lt;/span&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="carga_movel_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>180</y>
+       <width>211</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Esforços de Cálculo</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>460</y>
+      <width>881</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Etapa 4: Determinação dos Esforços e Dimensionamento</string>
+    </property>
+    <widget class="QLabel" name="html_status_esforcos_calculo">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>22</y>
+       <width>651</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;span style='font-family: Segoe UI; font-size: 13px; color: #81C784;'&gt;&lt;b&gt;✅ Sucesso:&lt;/b&gt; Esforços de Cálculo calculados com Sucesso!&lt;/span&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="esforcos_calculo">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>211</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Esforços de Cálculo</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="armadura_longitudinal">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>211</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Armadura Longitudinal</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="html_status_armadura_longitudinal">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>60</y>
+       <width>651</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;span style='font-family: Segoe UI; font-size: 13px; color: #EF5350;'&gt;&lt;b&gt;⚠️ Bloqueado:&lt;/b&gt; &lt;i&gt;Primeiro defina os Esforços de Cálculo (ELU e ELS).&lt;/i&gt;&lt;/span&gt;</string>
+     </property>
+    </widget>
+    <widget class="Line" name="line_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>38</y>
+       <width>861</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_8">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>78</y>
+       <width>861</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="html_status_armadura_transversal">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>100</y>
+       <width>651</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;span style='font-family: Segoe UI; font-size: 13px; color: #EF5350;'&gt;&lt;b&gt;⚠️ Bloqueado:&lt;/b&gt; &lt;i&gt;Primeiro defina os Esforços de Cálculo (ELU e ELS).&lt;/i&gt;&lt;/span&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="armadura_transversal">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>211</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Armadura Transversal</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>900</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuAbrir">
+    <property name="title">
+     <string>Arquivo</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionNovo"/>
+    <addaction name="actionAbrir"/>
+    <addaction name="actionSalvar"/>
+    <addaction name="actionSalvar_Como"/>
+   </widget>
+   <widget class="QMenu" name="menuAjuda">
+    <property name="title">
+     <string>Ajuda</string>
+    </property>
+    <addaction name="actionManual"/>
+    <addaction name="actionSobre"/>
+   </widget>
+   <addaction name="menuAbrir"/>
+   <addaction name="menuAjuda"/>
+  </widget>
+  <action name="actionNovo">
+   <property name="text">
+    <string>Novo</string>
+   </property>
+  </action>
+  <action name="actionAbrir">
+   <property name="text">
+    <string>Abrir</string>
+   </property>
+  </action>
+  <action name="actionSalvar">
+   <property name="text">
+    <string>Salvar</string>
+   </property>
+  </action>
+  <action name="action_parametros_aoki">
+   <property name="text">
+    <string>Parâmetros Aoki-Velloso</string>
+   </property>
+  </action>
+  <action name="action_parametros_quaresma">
+   <property name="text">
+    <string>Parâmetros Décourt-Quaresma</string>
+   </property>
+  </action>
+  <action name="action_peso_especifico">
+   <property name="text">
+    <string>Pesos Específicos (γ)</string>
+   </property>
+  </action>
+  <action name="action_correlacao_emp">
+   <property name="text">
+    <string>Correlações Empíricas</string>
+   </property>
+  </action>
+  <action name="action_regime_analise">
+   <property name="text">
+    <string>Regime de Análise do Solo</string>
+   </property>
+  </action>
+  <action name="action_parametros_tx">
+   <property name="text">
+    <string>Parâmetro Teixeira</string>
+   </property>
+  </action>
+  <action name="action_dimensionamento_geometrico">
+   <property name="text">
+    <string>Dimensionamento Geométrico</string>
+   </property>
+  </action>
+  <action name="action_otimizacao">
+   <property name="text">
+    <string>Parâmetros de Otimização e Segurança</string>
+   </property>
+  </action>
+  <action name="actionManual">
+   <property name="text">
+    <string>Manual</string>
+   </property>
+  </action>
+  <action name="actionSobre">
+   <property name="text">
+    <string>Sobre</string>
+   </property>
+  </action>
+  <action name="actionSalvar_Como">
+   <property name="text">
+    <string>Salvar Como</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
